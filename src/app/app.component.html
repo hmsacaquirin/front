@@ -1,0 +1,13 @@
+<div>
+  <button *ngIf="!loginDisplay" (click)="login()">Login</button>
+  <button *ngIf="loginDisplay" (click)="logout()">Logout</button>
+</div>
+<hr />
+<div>
+  <a [routerLink]="['profile']">Profile</a> | 
+  <a [routerLink]="['webapi']">Web API</a>
+</div>
+<hr />
+<div>
+  <router-outlet></router-outlet>
+</div>

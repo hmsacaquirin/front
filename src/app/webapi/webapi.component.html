@@ -1,0 +1,22 @@
+<table>
+    <tr>
+        <th>date</th>
+        <th>temperatureC</th>
+        <th>temperatureF</th>
+        <th>summary</th>
+    </tr>
+    @for(r of weatherForecast.result; track r){
+        <tr>
+            <td>{{r.date}}</td>
+            <td>{{r.temperatureC}}</td>
+            <td>{{r.temperatureF}}</td>
+            <td>{{r.summary}}</td>
+        </tr>
+    }
+</table>
+
+<div>
+    <p>
+        <button (click)="failFromInvalidScope()">This should fail</button>
+    </p>
+</div>
